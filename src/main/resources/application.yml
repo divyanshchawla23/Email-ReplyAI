@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: Email-ReplyAI
+
+gemini:
+    key: ${GEMINI_API_KEY:}
+    api:
+        url: ${GEMINI_API_URL:}
+    model: ${GEMINI_MODEL:gpt-4-turbo}
+    temperature: ${GEMINI_TEMPERATURE:0.7}
+    max-tokens: ${GEMINI_MAX_TOKENS:1000}
