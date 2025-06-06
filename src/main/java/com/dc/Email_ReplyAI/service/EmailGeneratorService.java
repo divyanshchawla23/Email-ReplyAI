@@ -13,6 +13,7 @@ public class EmailGeneratorService {
     private final ExternalGeminiService externalGeminiService;
 
     public String emailReply(EmailRequest emailRequest) {
+
         String prompt = generatePrompt(emailRequest);
 
         Map<String, Object> requestBody = Map.of(
@@ -23,6 +24,7 @@ public class EmailGeneratorService {
                 }
         );
 
+        return externalGeminiService.generateResponse(requestBody);
 
     }
 
